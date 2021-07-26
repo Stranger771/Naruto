@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Naruto</title>
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+
+
+
+
+    <style>
+    html{
+    scroll-behavior: smooth;
+    }
+
+    body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    }
+        .bg-image {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+        }
+
+        .naruto-img {
+        text-align: center;
+        margin: 0;
+        }
+
+        .naruto {
+        border-radius: 100%;
+        height: 200px;
+        width: 200px;
+        }
+
+        .character {
+        border-radius: 100%;
+        height: 100px;
+        width: 100px;
+        }
+
+        .first {
+            text-align: center;
+            padding: 0 100px;
+            margin: 100px 0 0 0;
+            z-index: 2;
+        }
+
+        .character-image {
+        text-align: center;
+         z-index: 2;
+        }
+        .character-button {
+        margin: 50px 0;
+        width: 30%;
+        }
+
+        .description {
+        position: relative;
+        z-index: 2;
+        top: 300px;
+        background-color: #fff;
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        padding: 30px 60px;
+        }
+
+        .neji-info{
+        position: relative;
+        z-index: 2;
+        background-color: #fff;
+        top: 500px;
+        width: 80%;
+        height: 200px;
+        margin: auto;
+        }
+
+        .neji-img {
+         height: 250px;
+         border-radius: 100%;
+         width: 250px;
+         position: relative;
+         bottom: 25px;
+         margin-left: 30px;
+        }
+        .neji-backstory {
+        text-align: center;
+        margin-top: 40px;
+        }
+
+        .some {
+        margin: auto;
+        width: 50%;
+        background-color: #D9DD6B;
+        text-align: center;
+        padding: 50px;
+        position: relative;
+        bottom: 70px;
+        }
+
+
+        .gaara-info {
+        width: 80%;
+        background-color: #fff;
+        position: relative;
+        z-index: 2;
+        top: 55rem;
+        height: 200px;
+        margin: auto;
+        }
+
+        .more {
+        margin: auto;
+        width: 50%;
+        background-color: #D9DD6B;
+        text-align: center;
+        padding: 50px;
+        position: relative;
+        bottom: 70px;
+        }
+
+        .gaara-img {
+        height: 250px;
+        width: 250px;
+        border-radius: 100%;
+        position: relative;
+        bottom: 25px;
+        margin-left: 460px;
+        }
+
+        .gaara-backstory {
+        text-align: center;
+        margin-top: 40px;
+        }
+
+
+        .lee-info {
+        background-color: #fff;
+        height: 200px;
+        width: 80%;
+        margin: auto;
+        position: relative;
+        top: 75rem;
+        }
+
+        .lee-img {
+        height: 250px;
+        width: 250px;
+        border-radius: 100%;
+        position: relative;
+        bottom: 25px;
+        margin-left: 30px;
+        }
+
+        .lee-backstory {
+        text-align: center;
+        margin-top: 40px;
+        }
+
+        .footer-list {
+        position: relative;
+        top: 100rem;
+        margin-bottom: 50px;
+        }
+
+        ul {
+        width: 50px;
+        background: #fff;
+        margin: 0;
+        padding: 0;
+        transition: 3s;
+        }
+
+        ul:hover {
+        width: 250px;
+        }
+
+
+
+        li {
+        transition: 3s;
+        }
+
+        li:hover {
+        padding-left: 80px;
+        }
+
+        .link, ul, li{
+        display: block;
+        text-decoration: none;
+        height: 30px;
+        line-height: 30px;
+        font-size: 24px;
+        margin: 4px 0;
+        color: black;
+        margin: 4px 0;
+        text-transform: uppercase;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        opacity: 0;
+        transition: 1s;
+        transition-timing-function: ease-out;
+        }
+
+        ul, li, .link:hover {
+        opacity: 1;
+        }
+
+
+
+        @media (max-width: 1020px) {
+
+        body{
+        text-align: center;
+        }
+
+        p {
+        font-size: 1.2rem;
+        margin: 0;
+        }
+
+        .neji-info {
+        background-color: transparent;
+        }
+
+        .neji-img {
+        position: relative;
+        top: 75px;
+        z-index: 2;
+        }
+
+        .neji-backstory {
+        background-color: #fff;
+        padding: 50px;
+
+        }
+
+        .some {
+        position: relative;
+        top: 0px;
+        width: 85%;
+        }
+
+        .gaara-info {
+        position: relative;
+        top: 93rem;
+        height: 300px;
+        }
+
+        .gaara-img {
+        margin: auto;
+        position: relative;
+        bottom: 430px;
+        }
+
+        .more {
+        position: relative;
+        bottom: 200px;
+        width: 80%;
+        }
+
+        .lee-info {
+        background-color: transparent;
+        position: relative;
+        top: 105rem;
+        }
+
+        .lee-backstory {
+        background-color: #fff;
+        padding: 50px;
+        }
+
+        .lee-img {
+        position: relative;
+        top: 75px;
+        z-index: 2;
+        }
+
+
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+<img class="bg-image" src="images/MinatoObito.jpg" alt="bg-image">
+
+
+<div class="row naruto-img">
+    <div class="col-lg">
+        <img class="naruto" src="images/naruto.jpg" alt="naruto">
+    </div>
+</div>
+
+<div class="row first">
+    <div class="col-lg-4 character-image">
+        <img class="character" src="images/neji.jpg" alt="neji-image">
+        <br>
+        <a href="#neji-link" class="btn btn-secondary btn-sm character-button">HYUGA NEJI</a>
+        </div>
+
+    <div class="col-lg-4 character-image">
+        <img class="character" src="images/gaara2.jpg" alt="gaara-image">
+        <br>
+        <a href="#gaara-link" class="btn btn-secondary btn-sm character-button">GAARA</a>
+        </div>
+
+    <div class="col-lg-4 character-image">
+        <img class="character" src="images/lee.jpg" alt="lee-image">
+        <br>
+        <a href="#lee-link" class="btn btn-secondary btn-sm character-button">ROCK LEE</a>
+        </div>
+</div>
+
+
+
+<article id="neji-link" class="description">
+    <div>
+<h2>Naruto</h2>
+<p>Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the story of Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village.</p>
+    </div>
+</article>
+
+
+<!-- NEJI -->
+
+
+<article class="neji-info">
+<div class="row">
+    <div class="col-lg-6">
+        <img class="neji-img" src="images/hyuga-neji.jpg" alt="neji">
+        </div>
+    <div class="col-lg-6 neji-backstory">
+        <h2>HYUGA NEJI</h2>
+        <p>Neji was born as the son of Hizashi Hyūga, placing him in one of the Hyūga clan's branch houses. When the heiress of the main house, Hinata, turned three years old, Neji's forehead was branded with the customary cursed seal by his uncle, Hiashi.</p>
+        </div>
+</div>
+
+    <article id="gaara-link" class="some">
+        <p>Neji became spiteful towards the members of the main house for what he believed they'd done to his father; in the anime, he missed no opportunity to try and harm Hinata. He also came to believe that the course of a person's life was determined from the moment of their birth and could be altered under no circumstances. When he graduated from the Academy at the top of his class he was added to Team Guy, where he had to team up with Rock Lee and Tenten</p>
+    </article>
+
+</article>
+
+<!-- GAARA -->
+
+<article class="gaara-info">
+<div class="row">
+    <div class="col-lg-6 gaara-backstory">
+        <h1>GAARA</h1>
+        <p>Gaara was made the jinchūriki of the One-Tailed Shukaku before he was born, causing the villagers of Suna to fear him as a monster. With nobody to connect to, Gaara grew up hating the world and looking out only for himself, giving his life meaning by killing anyone he came across.</p>
+        </div>
+    <div class="col-lg-6">
+        <img class="gaara-img" src="images/gaara.jpg" alt="gaara">
+        </div>
+</div>
+
+    <article class="more">
+        <p>He was a person who was filled with hatred and murderous intent. He kill others to make himself realize his existence, living all alone he does not know the true meaning of love. He fights for only himself and loves only himself.</p>
+    </article>
+
+</article>
+
+<!-- LEE -->
+
+<article id="lee-link" class="lee-info">
+    <div class="row">
+        <div class="col-lg-6">
+            <img class="lee-img" src="images/rock-lee.jpg" alt="lee">
+            </div>
+        <div class="col-lg-6 lee-backstory">
+            <h1>ROCK LEE</h1>
+            <p>During his time in the Academy, Lee proved to have no talent for ninjutsu and genjutsu. When he was mocked by his peers because of this, Lee persevered, focusing on taijutsu. After he succeeded in graduating he was added to Team Guy along with Hyuga Neji and Tenten.</p>
+            </div>
+    </div>
+
+    <article class="some">
+        <p>During the team's first meeting, Lee vowed to become a powerful ninja without using ninjutsu or genjutsu. Neji laughed at him, but their sensei, Might Guy, took a special interest in Lee. He encouraged Lee to keep at it and, in time, began teaching him powerful forms of taijutsu.</p>
+    </article>
+
+</article>
+
+
+<div class="footer-list">
+    <ul>
+        <li><a class="link" href="https://www.facebook.com/ismail.jadoon.161/">Facebook</a></li>
+    </ul>
+    <ul>
+        <li><a class="link" href="https://www.instagram.com/ismailjadoon7/">Instagram</a></li>
+    </ul>
+    <ul>
+        <li><a class="link" href="https://stranger771.github.io/World-of-Science/index.html">Website</a></li>
+    </ul>
+</div>
+
+
+</body>
+</html>
